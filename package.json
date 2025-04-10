@@ -1,5 +1,5 @@
 {
-  "name": "scroll-drag",
+  "name": "@chrisjwarnes/scroll-drag",
   "version": "1.0.0",
   "description": "Simple library for adding mobile like scroll behavior to desktop devices",
   "main": "index.mjs",
