@@ -1,0 +1,1 @@
+export { setupScrolling } from "./dist/index.js"

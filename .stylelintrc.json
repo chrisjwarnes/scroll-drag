@@ -1,0 +1,26 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "declaration-no-important": [
+      true,
+      { "message": "No !Importants. This is very !Important." }
+    ],
+    "length-zero-no-unit": true,
+    "max-nesting-depth": 6,
+    "selector-max-id": [
+      0,
+      { "message": "No ID selectors are allowed, I'm afraid." }
+    ],
+    "selector-max-compound-selectors": 4,
+    "order/properties-alphabetical-order": true,
+    "selector-class-pattern": [
+      "^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-z0-9]+(?:-[a-z0-9]+)*(?:__[a-z0-9]+(?:-[a-z0-9]+)*)?(?:--[a-z0-9]+(?:-[a-z0-9]+)*)?(?:\\[.+\\])?$",
+      {
+        "message": "Class names should match the BEM CSS naming convention. Please."
+      }
+    ]
+  }
+}

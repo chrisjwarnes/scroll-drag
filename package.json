@@ -1,0 +1,35 @@
+{
+  "name": "scroll-drag",
+  "version": "1.0.0",
+  "description": "Simple library for adding mobile like scroll behavior to desktop devices",
+  "main": "index.mjs",
+  "scripts": {
+    "build": "babel src -d dist",
+    "eslint": "npx eslint"
+  },
+  "keywords": [
+    "scroll",
+    "smooth",
+    "vanilla"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisjwarnes/scroll-drag.git"
+  },
+  "author": "chrisjwarnes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisjwarnes/scroll-drag/issues"
+  },
+  "homepage": "https://github.com/chrisjwarnes/scroll-drag#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "@eslint/js": "^9.24.0",
+    "commander": "^13.0.0",
+    "eslint": "^9.24.0",
+    "eslint-plugin-jsdoc": "^50.6.9",
+    "globals": "^16.0.0"
+  }
+}
