@@ -12,7 +12,7 @@ export function isOverflown(element) {
     const padding = parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight)
     let childWidth = 0
 
-    element.children.forEach(child => {
+    Array.from(element.children).forEach(child => {
       childWidth += (child.offsetWidth + gap)
     })
 

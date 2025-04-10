@@ -1,1 +1,1 @@
-export { setupScrolling } from "./dist/index.js"
+export { setupScrolling } from "./src/index.js"
