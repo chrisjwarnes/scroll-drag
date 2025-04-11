@@ -4,9 +4,15 @@
  * @returns {boolean} - True if the device is mobile, false otherwise.
  */
 export function isTouchDevice() {
-  return (('ontouchstart' in window) ||
-     (navigator.maxTouchPoints > 0) ||
-     (navigator.msMaxTouchPoints > 0))
+  return isTouchDeviceLikelyMobile()
+}
+
+function isTouchDeviceLikelyMobile() {
+  const touchCapable = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  const isCoarse = window.matchMedia('(pointer: coarse)').matches;
+  const uaMobile = /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
+
+  return touchCapable && (isCoarse || uaMobile);
 }
 
 /**
