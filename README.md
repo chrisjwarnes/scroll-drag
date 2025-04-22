@@ -28,3 +28,32 @@ import { setupScrolling } from '@chrisjwarnes/scroll-drag'
 
 setupScrolling(document, '[data-chris-scroll]')
 ```
+
+Typical html might look something like this.
+
+```html
+<div class="scroll" data-scroll>
+  <div class="scroll__item">...</div>
+  <div class="scroll__item">...</div>
+  <div class="scroll__item">...</div>
+  <div class="scroll__item">...</div>
+  <div class="scroll__item">...</div>
+  <div class="scroll__item">...</div>
+  <div class="scroll__item">...</div>
+<div>
+
+<!-- Please don't add styles like this, this is just to get an idea of how to make this work with styling. -->
+<style>
+  .scroll {
+    display: grid;
+    gap: 4px;
+    grid-auto-columns: 125px;
+    grid-auto-flow: column;
+    overflow-x: auto;
+
+    // Why not have a nicely styled scrollbar while we are at it?
+    scrollbar-color: #3c6a73 #fff;
+    scrollbar-width: thin;
+}
+</style>
+```
