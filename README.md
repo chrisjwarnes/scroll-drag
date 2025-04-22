@@ -66,3 +66,6 @@ Typical html might look something like this.
 }
 </style>
 ```
+to see a working example view the following:
+[Scrolling example (CodePen)](https://codepen.io/chrisjwarnes/pen/PwwzXpd)
+
