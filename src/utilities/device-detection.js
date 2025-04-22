@@ -8,11 +8,11 @@ export function isTouchDevice() {
 }
 
 function isTouchDeviceLikelyMobile() {
-  const touchCapable = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  const isCoarse = window.matchMedia('(pointer: coarse)').matches;
-  const uaMobile = /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent);
+  const touchCapable = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+  const isCoarse = window.matchMedia('(pointer: coarse)').matches
+  const uaMobile = /Mobi|Android|iPhone|iPad|iPod|Tablet/i.test(navigator.userAgent)
 
-  return touchCapable && (isCoarse || uaMobile);
+  return touchCapable && (isCoarse || uaMobile)
 }
 
 /**
