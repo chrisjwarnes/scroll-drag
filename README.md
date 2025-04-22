@@ -55,5 +55,14 @@ Typical html might look something like this.
     scrollbar-color: #3c6a73 #fff;
     scrollbar-width: thin;
 }
+
+[data-scroll] {
+  cursor: grab;
+}
+
+[data-scroll='scrolling'] {
+  cursor: grabbing;
+  user-select: none;
+}
 </style>
 ```

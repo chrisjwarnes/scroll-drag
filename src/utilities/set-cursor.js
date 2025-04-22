@@ -17,8 +17,7 @@ export function setCursor (elem, scrolling = false) {
  * @param {Element} elem the element to set the cursor for.
  */
 function setScrollingCursor(elem) {
-  elem.style.cursor = `grabbing`
-  elem.style.userSelect = 'none'
+  elem.setAttribute('data-scroll', 'scrolling')
 }
 
 /**
@@ -26,6 +25,5 @@ function setScrollingCursor(elem) {
  * @param {Element} elem the element to set the cursor for.
  */
 function setNotScrollingCursor(elem) {
-  elem.style.cursor = `grab`
-  elem.style.removeProperty('user-select')
+  elem.setAttribute('data-scroll', '')
 }
