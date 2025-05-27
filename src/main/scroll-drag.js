@@ -44,7 +44,7 @@ import { setScrollPosition } from '../utilities/set-scroll-position'
       setCursor(this.elem)
 
       this.elem.addEventListener('mousedown', e => this.mouseDownHandler(e), { passive: true })
-      this.elem.addEventListener('click', (e) => this.clickHandler(e), false)
+      this.elem.addEventListener('click', (e) => this.clickHandler(e), true)
       this.eventsAttached = true
     }
   }
@@ -57,6 +57,7 @@ import { setScrollPosition } from '../utilities/set-scroll-position'
   clickHandler (e) {
     if (this.isDrag) {
       e.preventDefault()
+      e.stopPropagation()
     }
   }
 
@@ -74,6 +75,10 @@ import { setScrollPosition } from '../utilities/set-scroll-position'
 
     document.addEventListener('mousemove', this.mmH, { passive: true })
     document.addEventListener('mouseup', this.muH, { passive: true })
+
+    requestAnimationFrame(() => {
+      this.isDrag = false
+    })
   }
 
   /**
