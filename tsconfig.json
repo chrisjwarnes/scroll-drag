@@ -1,0 +1,23 @@
+{
+  "inputs": "src/index.js",
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationMap": true,
+    "outDir": "dist",
+    "rootDir": "src",
+
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+
+    // If your source is JS and you want TS to read it + JSDoc types:
+    "allowJs": true,
+    "checkJs": false,
+
+    // Quality-of-life:
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

@@ -1,1 +1,0 @@
-export { setupScrolling } from "./src/index.js"
